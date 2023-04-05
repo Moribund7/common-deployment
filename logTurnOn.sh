@@ -1,0 +1,1 @@
+az webapp log config --resource-group CommOnResourceGroup --name CommOn-App --docker-container-logging filesystem

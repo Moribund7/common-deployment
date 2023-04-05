@@ -1,0 +1,1 @@
+az webapp log tail --resource-group CommOnResourceGroup --name CommOn-App

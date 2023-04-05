@@ -1,0 +1,1 @@
+az webapp config container set --resource-group CommOnResourceGroup --name CommOn-App --multicontainer-config-type compose --multicontainer-config-file docker-compose-azure.yml

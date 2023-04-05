@@ -1,0 +1,34 @@
+# Use root/example as user/password credentials
+version: '3'
+services:
+  db:
+    image: common-db:latest
+    container_name: common-db
+    ports:
+      - 3306:3306
+    networks:
+      dev:
+
+  web:
+#    build: ../Engineering-thesis-backend
+    container_name: common-web
+    image: common-web:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      dev:
+
+  ui:
+#    build: ../Engineering-thesis-frontend
+    restart: always
+    container_name: common-ui
+    image: common-ui:latest
+    ports:
+      - "80:80"
+    networks:
+      dev:
+
+
+networks:
+  dev:
